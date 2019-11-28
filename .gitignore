@@ -1,10 +1,12 @@
+# Composer
+.composer
+vendor/*
+!*/vendor/*
+
 # Sass
 .sass-cache
-*.map
 
-# Add the entire Grav site to GitHub
-# https://getgrav.org/blog/developing-with-github-part-2
-composer.lock
+# Grav Specific
 backup/*
 !backup/.*
 cache/*
@@ -15,25 +17,16 @@ logs/*
 !logs/.*
 images/*
 !images/.*
-user/data/*
-!user/data/.*
 user/accounts/*
 !user/accounts/.*
-
-# local cofig and security
+user/data/*
+!user/data/.*
+user/plugins/*
+!user/plugins/.*
+user/themes/*
+!user/themes/.*
 user/localhost/config/security.yaml
 user/config/security.yaml
-user/config/site.yaml
-user/config/system.yaml
-user/config/plugins/email.yaml
-
-#specific .htaccess -> dists in webserver-congifs
-.htaccess
-
-tests/_output/*
-tests/_support/_generated/*
-tests/cache/*
-tests/error.log
 
 # OS Generated
 .DS_Store*
@@ -42,28 +35,12 @@ Icon?
 Thumbs.db
 *.swp
 
-### Node ###
+# phpstorm
+.idea/*
 
-npm-debug.log
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# nyc test coverage
-.nyc_output
-
-# node-waf configuration
-.lock-wscript
-
-# Dependency directories
-node_modules
-jspm_packages
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
+# testing stuff
+tests/_output/*
+tests/_support/_generated/*
+tests/cache/*
+tests/error.log
+system/templates/testing/*
